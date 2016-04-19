@@ -41,6 +41,24 @@
         letter-spacing: normal;
       }
 
+      @media (max-width: 930px) {
+        .hero__heading {
+          font-size: 7.3vw;
+        }
+      }
+
+      @media (max-width: 530px) {
+        .hero__heading {
+          font-size: 10.3vw;
+        }
+
+        .hero {
+          color: #333;
+          background: none;
+          height: auto;
+        }
+      }
+
       .hero_date {
         display: inline-block;
         border-top: 1px solid white;
@@ -57,6 +75,11 @@
         font-family: 'rosalinda';
         font-weight: normal;
         font-size: 45px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 1em;
       }
 
       img {
@@ -86,19 +109,19 @@
       .cute-bee {
         background-image: url('images/cutebee.jpg');
         top: -60px;
-        left: -14px;
+        left: -88px;
       }
 
       .flowers-1 {
         background-image: url('images/flowers1.jpg');
         top: -68px;
-        left: -10px;
+        left: -88px;
       }
 
       .flowers-2 {
         background-image: url('images/flowers1.jpg');
         top: -68px;
-        left: -10px;
+        left: -84px;
       }
 
       .deer-image {
@@ -125,7 +148,7 @@
       <p class="hero__heading">
         Daniel Hart &amp; Tuesday Bull
       </p>
-      <p class="hero_date">July 25th, 2016</p>
+      <p class="hero_date">July 25th, 2:30pm</p>
       <p class="hero_location">Pembroke Lodge, Richmond Park</p>
     </div>
 
@@ -188,22 +211,70 @@
         <div class="row">
           <div class="col-sm-12">
             <header>
-              <h2>Location</h2>
+              <h2>Venue</h2>
             </header>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-5">
-            <p>Pembroke Lodge is set in the middle of Richmond Park.</p>
-            <p>There is a car park available.</p>
-            <p>Riverside Cars: 020 8878 7777<br />
-              Parker Cars: 0208 560 0000<br />
-              Rugby Cars:  0208 891 5000<br />
-              Revolutions Cars: 020 8892 8898</p>
+          <div class="col-md-7">
+            <img style="margin-bottom: 15px" src="images/pembroke-lodge.jpg" alt="Pembroke Lodge" />
           </div>
-          <div class="col-sm-7">
-            <img src="images/pembroke-lodge.jpg" alt="Pembroke Lodge" />
+
+          <div class="col-md-5">
+            <p>
+              <a href="http://www.pembroke-lodge.co.uk/" target="_blank">Pembroke Lodge</a>
+              is set in the heart of Richmond Park. Richmond Park is the
+              largest, and to many, the most beautiful Park in London.
+            </p>
+
+            <h4>Address</h4>
+            <p>
+              <a target="_blank" href="https://www.google.co.uk/maps/place/Pembroke+Lodge/@51.442481,-0.3032037,15z/data=!4m2!3m1!1s0x48760c106c9e5b5f:0xbb1666e13117cb1">
+                Pembroke Lodge, Richmond Park, Richmond, Surrey, TW10 5HX
+              </a>
+            </p>
+
+            <h4>Driving</h4>
+            <p>
+              There is a large car park available. Cars can also be left
+              overnight. However, if you are driving you should leave extra
+              time, as the car park is open to the general public and can get
+              very busy.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Access</h4>
+            <p>
+              All gates to Richmond Park will be closed at dusk. The only access
+              and exit point after dusk will be Richmond Gate on the Star and
+              Garter roundabout, where a gate man will be stationed.
+              <a href="images/map.pdf" target="_blank">
+                Here is a map detailing the layout of the park.
+              </a>
+            </p>
+
+            <h4>Taxis</h4>
+            <p>
+              Taxis should be booked in advance and taxi companies
+              <strong>MUST</strong> be informed that the only entrance to the
+              Park after dark is via Richmond gate &mdash; Cars should drive up to the
+              left hand gate and the gateman will let them in.
+            </p>
+
+            <p>
+              We recommend the following taxi companies as they are familiar
+              with the gates:
+            </p>
+
+            <ul>
+              <li><strong>Riverside Cars:</strong> 020 8878 7777</li>
+              <li><strong>Parker Cars:</strong> 0208 560 0000</li>
+              <li><strong>Rugby Cars:</strong>  0208 891 5000</li>
+              <li><strong>Revolutions Cars:</strong> 020 8892 8898</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -222,12 +293,14 @@
             <header>
               <h2>Accommodation</h2>
             </header>
+          </div>
+        </div>
 
-            <main>
-              <p>Add more info</p>
-              <p>Add more info</p>
-              <p>Add more info</p>
-            </main>
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Add more info</p>
+            <p>Add more info</p>
+            <p>Add more info</p>
           </div>
         </div>
       </div>
@@ -246,12 +319,60 @@
             <header>
               <h2>RSVP</h2>
             </header>
+          </div>
+        </div>
 
-            <main>
-              <p>Add more info</p>
-              <p>Add more info</p>
-              <p>Add more info</p>
-            </main>
+        <div class="row">
+          <div class="col-sm-12">
+            <p>Kindly respond by May 25th.</p>
+
+            <div class="row">
+              <div class="col-md-8">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <form>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Names</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Names">
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                              Gratefully Accepts
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                              Regretfully Declines
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Number Attending</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Number Attending">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Any Special Dietary Requirements</label>
+                            <textarea class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <button style="float: right; clear: both;" type="submit" class="btn btn-lg btn-primary">Send</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
