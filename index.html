@@ -24,9 +24,10 @@
         height: 100vh;
         max-height: 100vw;
         background-image: url('images/hero.jpg');
-        background-position: top center;
+        background-position: 50% 0px;
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         line-height: 1.5;
         position: relative;
       }
@@ -67,8 +68,20 @@
 
       .hero_location {
         font-family: 'rosalinda';
-        font-size: 26px;
+        font-size: 28px;
         letter-spacing: normal;
+      }
+
+      @media (max-width: 390px) {
+        .hero {
+          font-size: 4.6vw;
+        }
+      }
+
+      @media (max-width: 415px) {
+        .hero_location {
+          font-size: 6.75vw;
+        }
       }
 
       h2 {
@@ -293,14 +306,49 @@
             <header>
               <h2>Accommodation</h2>
             </header>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-offset-1 col-md-10">
+            <p>
+              The following hotels should offer preferential rates. Just mention
+              that you are attending a wedding at Pembroke Lodge.
+            </p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-sm-12">
-            <p>Add more info</p>
-            <p>Add more info</p>
-            <p>Add more info</p>
+          <div class="col-lg-offset-1 col-lg-5 col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img style="width: 100%" src="images/brook-kingston-lodge.jpg" alt="Brook Kingston Lodge Hotel" />
+
+                <h4>Brook Kingston Lodge Hotel</h4>
+
+                <p>
+                  <strong>Website:</strong> <a href="http://brook-kingston-lodge-hotel.c5t.sabredemos.com/en" target="_blank">www.brook-hotels.co.uk</a><br />
+                  <strong>Telephone:</strong> 0208 541 4481<br />
+                  <strong>Email:</strong> <a href="mailto:kingstonlodge@brook-hotels.co.uk">kingstonlodge@brook-hotels.co.uk</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img style="width: 100%" src="images/richmond-gate.jpg" alt="Richmond Gate Hotel" />
+
+                <h4>Richmond Gate Hotel</h4>
+
+                <p>
+                  <strong>Website:</strong> <a href="http://www.richmondgate.com/" target="_blank">www.richmondgate.com</a><br />
+                  <strong>Telephone:</strong> 020 8939 0355<br />
+                  <strong>Email:</strong> <a href="mailto:reservations.richmond@shlhotels.com">reservations.richmond@shlhotels.com</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -323,54 +371,66 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-md-8">
             <p>Kindly respond by May 25th.</p>
 
-            <div class="row">
-              <div class="col-md-8">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <form>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Names</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Names">
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                              Gratefully Accepts
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                              Regretfully Declines
-                            </label>
-                          </div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Names</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Names">
+                      </div>
+                      <div class="form-group">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Gratefully Accepts
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Regretfully Declines
+                          </label>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-md-5">
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Number Attending</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Number Attending">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Any Special Dietary Requirements</label>
-                            <textarea class="form-control"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <button style="float: right; clear: both;" type="submit" class="btn btn-lg btn-primary">Send</button>
-                    </form>
+                    </div>
                   </div>
-                </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Number Attending</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Number Attending">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+                            Attending entire wedding
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+                            Attending Evening Reception only (7:30pm - Midnight)
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Any Special Dietary Requirements</label>
+                        <textarea class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <button style="float: right; clear: both;" type="submit" class="btn btn-lg btn-primary">Send</button>
+                </form>
               </div>
             </div>
           </div>
@@ -399,5 +459,27 @@
         </main>
       </div>
     </section>
+
+    <script>
+      var last_known_scroll_position = 0;
+      var ticking = false;
+      var el = document.getElementsByClassName("hero")[0];
+
+      function doSomething(scroll_pos) {
+        var movePos = -scroll_pos * 0.7;
+        el.style.backgroundPosition = "50% " + movePos + "px";
+      }
+
+      window.addEventListener('scroll', function(e) {
+        last_known_scroll_position = window.scrollY;
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            doSomething(last_known_scroll_position);
+            ticking = false;
+          });
+        }
+        ticking = true;
+      });
+    </script>
   </body>
 </html>
