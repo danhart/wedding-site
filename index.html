@@ -464,7 +464,6 @@
 
     <script>
       var last_known_scroll_position = 0;
-      var ticking = false;
       var el = document.getElementsByClassName("hero")[0];
 
       function doSomething(scroll_pos) {
@@ -474,13 +473,7 @@
 
       window.addEventListener('scroll', function(e) {
         last_known_scroll_position = window.scrollY;
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            doSomething(last_known_scroll_position);
-            ticking = false;
-          });
-        }
-        ticking = true;
+        doSomething(last_known_scroll_position);
       });
     </script>
   </body>
