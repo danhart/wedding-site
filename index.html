@@ -466,6 +466,33 @@
       var last_known_scroll_position = 0;
       var el = document.getElementsByClassName("hero")[0];
 
+      var windowSize = function() {
+        var w = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName('body')[0],
+            x = w.innerWidth || e.clientWidth || g.clientWidth,
+            y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+        return {x: x, y: y};
+      };
+
+      var setHeroBackgroundSize = function() {
+        var size = windowSize();
+
+        if (size.y >= size.x) {
+          el.style.backgroundSize = "156.1%";
+        } else {
+          el.style.backgroundSize = "cover";
+        }
+      }
+
+      setHeroBackgroundSize();
+
+      window.addEventListener('resize', function(event){
+        setHeroBackgroundSize();
+      });
+
       function doSomething(scroll_pos) {
         var movePos = -scroll_pos * 0.7;
         el.style.backgroundPosition = "50% " + movePos + "px";
