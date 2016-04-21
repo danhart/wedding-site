@@ -153,11 +153,53 @@
         background-repeat: no-repeat;
         background-size: 100%;
       }
+
+      .nav-container {
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        background: rgba(0,0,0,0.15);
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+      .custom-nav {
+      }
+
+      .custom-nav a {
+        color: rgba(255,255,255,0.9);
+      }
+
+      .nav-links {
+        display: inline-block;
+        margin: auto;
+        padding: 0;
+      }
+
+      .nav-links li {
+        display: inline-block;
+      }
+
+      .nav-links a {
+        display: block;
+        text-decoration: none;
+        padding: 4px 10px;
+      }
+
+      .nav-links a:hover {
+        background: rgba(255,255,255,0.1);
+      }
+
     </style>
   </head>
 
   <body>
     <div class="hero">
+      <div class="nav-container">
+        <nav class="custom-nav">
+          <ul class="nav-links">
+            <li class="active"><a href="#">Order of Service</a></li><li><a href="#">Venue</a></li><li><a href="#">Accomodation</a></li><li><a href="#">RSVP</a></li>
+          </ul>
+        </nav>
+      </div>
       <p style="padding-top: 25px"></p>
       <p style="padding-bottom: 10px">The Wedding Of</p>
       <p class="hero__heading">
@@ -165,6 +207,7 @@
       </p>
       <p class="hero_date">July 25th, 2:30pm</p>
       <p class="hero_location">Pembroke Lodge, Richmond Park</p>
+
     </div>
 
     <section style="padding-top: 15px;" class="page-section welcome-section">
