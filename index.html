@@ -15,6 +15,19 @@
         font-size: 16px;
       }
 
+      .hero_container {
+        width: 100%;
+        height: 100vh;
+        max-height: 100vw;
+        position: fixed;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+      }
+
       .hero {
         letter-spacing: 1.1px;
         font-size: 18px;
@@ -27,7 +40,6 @@
         background-position: 50% 0px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
         line-height: 1.5;
         position: relative;
         text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -157,15 +169,19 @@
   </head>
 
   <body>
-    <div class="hero">
-      <p style="padding-top: 25px"></p>
-      <p style="padding-bottom: 10px">The Wedding Of</p>
-      <p class="hero__heading">
-        Daniel Hart &amp; Tuesday Bull
-      </p>
-      <p class="hero_date">July 25th, 2:30pm</p>
-      <p class="hero_location">Pembroke Lodge, Richmond Park</p>
+    <div class="hero_container">
+      <div class="hero">
+        <p style="padding-top: 25px"></p>
+        <p style="padding-bottom: 10px">The Wedding Of</p>
+        <p class="hero__heading">
+          Daniel Hart &amp; Tuesday Bull
+        </p>
+        <p class="hero_date">July 25th, 2:30pm</p>
+        <p class="hero_location">Pembroke Lodge, Richmond Park</p>
+      </div>
     </div>
+
+    <div style="height: 100vh; max-height: 100vw;"></div>
 
     <section style="padding-top: 15px;" class="page-section welcome-section">
       <div class="container">
@@ -464,11 +480,14 @@
 
     <script>
       var last_known_scroll_position = 0;
-      var el = document.getElementsByClassName("hero")[0];
+      var hero = document.getElementsByClassName("hero")[0];
+      var heroContainer = document.getElementsByClassName("hero_container")[0];
 
       function doSomething(scroll_pos) {
-        var movePos = -scroll_pos * 0.7;
-        el.style.backgroundPosition = "50% " + movePos + "px";
+        var movePos = -scroll_pos;
+        var movePosDelta = scroll_pos * 0.3;
+        heroContainer.style.top = movePos + "px";
+        hero.style.top = movePosDelta + "px";
       }
 
       window.addEventListener('scroll', function(e) {
