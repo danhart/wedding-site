@@ -61,6 +61,18 @@
         margin-left: -85px;
       }
 
+      @media (max-width: 992px) {
+        .hero {
+          background-attachment: scroll;
+        }
+      }
+
+      @media only screen and (device-width: 768px) and (orientation: landscape) {
+        .hero {
+          background-attachment: scroll;
+        }
+      }
+
       @media (max-width: 530px) {
         .hero__heading {
           font-size: 10.3vw;
@@ -516,8 +528,13 @@
         setHeroBackgroundSize();
       });
 
+
       function doSomething(scroll_pos) {
-        var movePos = -scroll_pos * 0.7;
+        var bgAttachment = window.getComputedStyle(el,null).getPropertyValue("background-attachment");
+        var modifier = bgAttachment == "fixed" ? -1 : 1;
+        var delta = bgAttachment == "fixed" ? 0.7 : 0.3;
+        var movePos = (scroll_pos * modifier) * delta;
+
         el.style.backgroundPosition = "50% " + movePos + "px";
       }
 
