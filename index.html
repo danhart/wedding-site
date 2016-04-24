@@ -202,7 +202,7 @@
 
               <p>
                 Below you will find information on the schedule for the day,
-                accomodation near the venue, an R.S.V.P. form and details on how
+                accommodation near the venue, an R.S.V.P. form and details on how
                 to contact us.
               </p>
             </main>
@@ -334,7 +334,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-offset-1 col-md-10">
+          <div class="col-lg-offset-1 col-sm-12 col-lg-10">
             <p>
               The following hotels should offer preferential rates. Just mention
               that you are attending a wedding at Pembroke Lodge.
@@ -343,7 +343,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-offset-1 col-lg-5 col-md-8">
+          <div class="col-lg-offset-1 col-lg-5 col-sm-6">
             <div class="panel panel-default">
               <div class="panel-body">
                 <img style="width: 100%" src="images/brook-kingston-lodge.jpg" alt="Brook Kingston Lodge Hotel" />
@@ -359,7 +359,7 @@
             </div>
           </div>
 
-          <div class="col-lg-5 col-md-8">
+          <div class="col-lg-5 col-sm-6">
             <div class="panel panel-default">
               <div class="panel-body">
                 <img style="width: 100%" src="images/richmond-gate.jpg" alt="Richmond Gate Hotel" />
@@ -400,23 +400,23 @@
 
             <div class="panel panel-default">
               <div class="panel-body">
-                <form>
+                <form action="https://formspree.io/us@danandtuesdayswedding.co.uk" method="post">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Names</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Names">
+                        <label for="names-input">Names</label>
+                        <input name="names" type="text" class="form-control" id="names-input" placeholder="Names">
                       </div>
                       <div class="form-group">
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="acceptance" id="accepts-input" value="accepts" checked>
                             Gratefully Accepts
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <input type="radio" name="acceptance" id="declines-input" value="declines">
                             Regretfully Declines
                           </label>
                         </div>
@@ -426,8 +426,8 @@
                   <div class="row">
                     <div class="col-md-5">
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Number Attending</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Number Attending">
+                        <label for="number-input">Number Attending</label>
+                        <input name="number-attending" type="text" class="form-control" id="number-input" placeholder="Number Attending">
                       </div>
                     </div>
                   </div>
@@ -436,23 +436,24 @@
                       <div class="form-group">
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="attendance" id="whole-wedding-input" value="whole wedding" checked>
                             Attending entire wedding
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+                            <input type="radio" name="attendance" id="evening-input" value="evening reception">
                             Attending Evening Reception only (7:30pm - Midnight)
                           </label>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Any Special Dietary Requirements</label>
-                        <textarea class="form-control"></textarea>
+                        <label for="dietary-requirements-input">Any Special Dietary Requirements</label>
+                        <textarea name="dietary-requirements" class="form-control"></textarea>
                       </div>
                     </div>
                   </div>
+
                   <button style="float: right; clear: both;" type="submit" class="btn btn-lg btn-primary">Send</button>
                 </form>
               </div>
