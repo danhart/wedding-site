@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <title>Dan and Tuesday's Wedding</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
     <!-- <link rel="stylesheet" type="text/css" href="styles/reset.css" /> -->
@@ -182,6 +183,36 @@
         background-size: 100%;
       }
 
+      .side-bee {
+        background-image: url('images/sidebee.jpg');
+        background-size: 100px auto;
+        position: fixed;
+        width: 92px;
+        background-position: -8px 0px;
+        height: 220px;
+        bottom: -220px;
+        right: 8px;
+        background-repeat: no-repeat;
+        display: none;
+      }
+
+      @media (min-width: 1340px) {
+        .side-bee {
+          display: block;
+        }
+      }
+
+      @media (min-width: 1140px) and (max-width: 1199px) {
+        .side-bee {
+          display: block;
+        }
+      }
+
+      @media (min-width: 920px) and (max-width: 991px) {
+        .side-bee {
+          display: block;
+        }
+      }
     </style>
   </head>
 
@@ -497,10 +528,9 @@
       </div>
     </section>
 
-    <script>
-      var last_known_scroll_position = 0;
-      var el = document.getElementsByClassName("hero")[0];
+    <span class="side-bee"></span>
 
+    <script>
       var windowSize = function() {
         var w = window,
             d = document,
@@ -511,6 +541,21 @@
 
         return {x: x, y: y};
       };
+
+      var documentHeight = function() {
+        var body = document.body,
+            html = document.documentElement;
+
+          return Math.max(body.scrollHeight, body.offsetHeight,
+                          html.clientHeight, html.scrollHeight, html.offsetHeight);
+      };
+
+      var initialWindowSize = windowSize();
+      var initialDocumentHeight = documentHeight();
+      var last_known_scroll_position = 0;
+      var el = document.getElementsByClassName("hero")[0];
+      var sideBee = document.getElementsByClassName("side-bee")[0];
+      var heightOfBee = 220;
 
       var setHeroBackgroundSize = function() {
         var size = windowSize();
@@ -534,8 +579,13 @@
         var modifier = bgAttachment == "fixed" ? -1 : 1;
         var delta = bgAttachment == "fixed" ? 0.7 : 0.3;
         var movePos = (scroll_pos * modifier) * delta;
+        var percentageScrolled = (scroll_pos / initialDocumentHeight) * 100;
+        var beePercentageOfWindow = (heightOfBee / initialWindowSize.y) * 100;
+        var moveBee = percentageScrolled * (100 / beePercentageOfWindow);
 
         el.style.backgroundPosition = "50% " + movePos + "px";
+
+        sideBee.style.transform = "translate(0%, " + -moveBee + "%) translate3d(0px, 0px, 0px)";
       }
 
       window.addEventListener('scroll', function(e) {
