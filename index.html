@@ -103,6 +103,18 @@
         letter-spacing: normal;
       }
 
+      .flower-photo-container {
+        overflow: hidden;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .flower-photo-container img {
+          max-width: 607px;
+          position: relative;
+          left: -70px;
+        }
+      }
+
       @media (max-width: 390px) {
         .hero {
           font-size: 4.6vw;
@@ -438,7 +450,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <p>Kindly respond by May 25th.</p>
 
             <div class="panel panel-default">
@@ -500,6 +512,12 @@
                   <button style="float: right; clear: both;" type="submit" class="btn btn-lg btn-primary">Send</button>
                 </form>
               </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="flower-photo-container">
+              <img src="images/flower-photo.jpg" style="margin-top: 32px;" alt="Flowers photo" />
             </div>
           </div>
         </div>
