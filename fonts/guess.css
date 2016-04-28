@@ -22,3 +22,27 @@
     font-style: normal;
 }
 
+/* @font-face { */
+/*     font-family: 'guess'; */
+/*     src: url('deartype_-_guesssans-semibold-webfont.eot'); */
+/*     src: url('deartype_-_guesssans-semibold-webfont.eot?#iefix') format('embedded-opentype'), */
+/*          url('deartype_-_guesssans-semibold-webfont.woff2') format('woff2'), */
+/*          url('deartype_-_guesssans-semibold-webfont.woff') format('woff'), */
+/*          url('deartype_-_guesssans-semibold-webfont.ttf') format('truetype'), */
+/*          url('deartype_-_guesssans-semibold-webfont.svg#guess_sanssemibold') format('svg'); */
+/*     font-weight: 600; */
+/*     font-style: normal; */
+/* } */
+
+@font-face {
+    font-family: 'guess';
+    src: url('deartype_-_guesssans-medium-webfont.eot');
+    src: url('deartype_-_guesssans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('deartype_-_guesssans-medium-webfont.woff2') format('woff2'),
+         url('deartype_-_guesssans-medium-webfont.woff') format('woff'),
+         url('deartype_-_guesssans-medium-webfont.ttf') format('truetype'),
+         url('deartype_-_guesssans-medium-webfont.svg#guess_sansmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}

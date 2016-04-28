@@ -16,6 +16,10 @@
         font-size: 16px;
       }
 
+      p {
+        margin: 0 0 14px;
+      }
+
       .hero {
         letter-spacing: 1.1px;
         font-size: 18px;
@@ -130,12 +134,13 @@
       h2 {
         font-family: 'rosalinda';
         font-weight: normal;
-        font-size: 45px;
+        font-size: 52px;
       }
 
       h4 {
-        font-weight: bold;
-        font-size: 1em;
+        font-weight: 500;
+        font-size: 21px;
+        margin-top: 28px;
       }
 
       img {
@@ -195,6 +200,12 @@
         background-size: 100%;
       }
 
+      @media (max-width: 355px) {
+        .order-of-service-heading {
+          font-size: 14.5vw;
+        }
+      }
+
       .side-bee {
         background-image: url('images/sidebee.jpg');
         background-size: 100px auto;
@@ -223,6 +234,12 @@
       @media (min-width: 920px) and (max-width: 991px) {
         .side-bee {
           display: block;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .pembroke-lodge-photo {
+          margin-bottom: 28px;
         }
       }
     </style>
@@ -275,7 +292,7 @@
         <div class="row">
           <div class="col-sm-12">
             <header>
-              <h2>Order of Service</h2>
+              <h2 class="order-of-service-heading">Order of Service</h2>
             </header>
 
             <main>
@@ -310,7 +327,7 @@
 
         <div class="row">
           <div class="col-md-7">
-            <img style="margin-bottom: 15px" src="images/pembroke-lodge.jpg" alt="Pembroke Lodge" />
+            <img class="pembroke-lodge-photo" src="images/pembroke-lodge.jpg" alt="Pembroke Lodge" />
           </div>
 
           <div class="col-md-5">
