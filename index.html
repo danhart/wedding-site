@@ -254,10 +254,10 @@
       </p>
       <p class="hero_date">July 25th, 2:30pm</p>
       <p class="hero_location">Pembroke Lodge, Richmond Park</p>
-      <span class="chevron"></span>
+      <a data-scroll href="#start" class="chevron"></a>
     </div>
 
-    <section style="padding-top: 15px;" class="page-section welcome-section">
+    <section id="start" style="padding-top: 15px;" class="page-section welcome-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-offset-2 col-sm-8">
@@ -632,6 +632,15 @@
       window.addEventListener('scroll', function(e) {
         last_known_scroll_position = window.scrollY;
         doSomething(last_known_scroll_position);
+      });
+    </script>
+
+    <script src="scripts/smooth-scroll.min.js"></script>
+
+    <script>
+      smoothScroll.init({
+        speed:  2000,
+        easing: 'easeInOutCubic'
       });
     </script>
   </body>
